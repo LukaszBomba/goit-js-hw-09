@@ -12,8 +12,8 @@ const createPromise = (position, delay) => {
       } else {
         reject({ position, delay });
       }
-    }, delay);
-  });
+    }, delay)
+  })
   return promise;
 };
 
@@ -24,19 +24,16 @@ Btn.addEventListener('click', event => {
   const inputStep = Number(form.elements.step.value);
   const inputAmount = Number(form.elements.amount.value);
 
-  for (let i = 1; i <= inputAmount; i++) {
-    const actualyTime = inputDelay + inputStep * (i - 1);
+  for (let i = 1; i <= inputAmount; i++){
 
+   const actualyTime = inputDelay + inputStep * (i-1);
+   
     createPromise(i, actualyTime)
       .then(({ position, delay }) => {
-        Notiflix.Notify.success(
-          `✅ Fulfilled promise ${position} in ${delay} ms`
-        );
+         Notiflix.Notify.success(`✅ Fulfilled promise ${position} in ${delay} ms`)
       })
       .catch(({ position, delay }) => {
-        Notiflix.Notify.failure(
-          `❌ Rejected promise ${position} in ${delay} ms`
-        );
-      });
+         Notiflix.Notify.failure(`❌ Rejected promise ${position} in ${delay} ms`)
+      })
   }
 });
