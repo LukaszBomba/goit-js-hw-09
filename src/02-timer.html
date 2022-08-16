@@ -12,24 +12,28 @@
     <input type="text" id="datetime-picker" />
     <button type="button" data-start>Start</button>
 
-    <div class="timer">
-      <div class="field">
-        <span class="value" data-days>00</span>
-        <span class="label">Days</span>
+    <div class="timer" style="display: flex">
+      <div class="field" style="display: flex; margin-right: 15px; flex-direction: column; text-align: center;" >
+        <span class="value" style="font-size: 45px;" data-days>00</span>
+        <span class="label" style="font-size: 15px; text-transform: uppercase;">Days</span>
       </div>
-      <div class="field">
-        <span class="value" data-hours>00</span>
-        <span class="label">Hours</span>
+      <div class="field" style="display: flex; margin-right: 15px; flex-direction: column; text-align: center;">
+        <span class="value" style="font-size: 45px;" data-hours>00</span>
+        <span class="label" style="font-size: 15px; text-transform: uppercase;">Hours</span>
       </div>
-      <div class="field">
-        <span class="value" data-minutes>00</span>
-        <span class="label">Minutes</span>
+      <div class="field" style="display: flex; margin-right: 15px; flex-direction: column; text-align: center;">
+        <span class="value" style="font-size: 45px;" data-minutes>00</span>
+        <span class="label" style="font-size: 15px; text-transform: uppercase;">Minutes</span>
       </div>
-      <div class="field">
-        <span class="value" data-seconds>00</span>
-        <span class="label">Seconds</span>
+      <div class="field" style="display: flex; margin-right: 15px; flex-direction: column; text-align: center;">
+        <span class="value" style="font-size: 45px;" data-seconds>00</span>
+        <span class="label" style="font-size: 15px; text-transform: uppercase;">Seconds</span>
       </div>
     </div>
+
+    <script src="js/02-timer.js" type="module"></script>
+  </body>
+</html>
 
     <script src="js/02-timer.js" type="module"></script>
   </body>
