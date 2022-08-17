@@ -1,5 +1,7 @@
 import Notiflix from 'notiflix';
+
 import flatpickr from 'flatpickr';
+
 import 'flatpickr/dist/flatpickr.min.css';
 
 const btnStart = document.querySelector('[data-start]');
@@ -42,8 +44,6 @@ function convertMs(ms) {
   return { days, hours, minutes, seconds };
 }
 
-flatpickr(input, options);
-
 function addLeadingZero(value) {
   if (value < 10) {
     return value.toString().padStart(2, '0');
@@ -51,6 +51,8 @@ function addLeadingZero(value) {
     return value;
   }
 }
+
+flatpickr(input, options);
 
 let selectedDate = null;
 
